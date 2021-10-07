@@ -21,7 +21,7 @@
 
     <p id="result">This text will be replaced </p>
 
-
+    <img src="images/DARWIN FROG.jpg" class="img-thumbnail" alt="DARWIN FROG" onclick="newImage();" id="images" style="width: 200; height: 200;">
     <script>
 
         var correct = 0
@@ -43,8 +43,24 @@
                 out.innerHTML = "Wrong:" + wrong
             }
         }
+   
     </script>
-
+    function newImage(){
+        switch(count){
+            case 0 :
+                document.getElementById("images").src="images/DARWIN FROG.jpg"
+                count = count+1
+                break;
+            case 1 :
+                document.getElementById("images").src="images/GALAPAGAS PENGUIN.jpg"
+                count = count+1
+                break;
+            case 2 :
+                document.getElementById("images").src="images/MONKEY.jpg"
+                count = 0
+                break;                    
+        }
+    }
 </body>
 
 </html>
